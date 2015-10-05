@@ -1,0 +1,5 @@
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Debug\KckSokoban.exe.config
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Debug\KckSokoban.exe
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Debug\KckSokoban.pdb
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\obj\Debug\KckSokoban.exe
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\obj\Debug\KckSokoban.pdb
