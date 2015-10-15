@@ -8,8 +8,10 @@ namespace KckSokoban
 {
     class Menu
     {
+        public static Plansza nowaPlansza2;
         public Menu()
         {
+            obecneOknoStaticClass.aktualneOkno = 1;
             Console.CursorVisible = false;
             
             
@@ -57,7 +59,7 @@ namespace KckSokoban
             {
                 case 0:
                     Console.Clear();
-                    Plansza nowaPlansza = new Plansza();
+                    nowaPlansza2 = new Plansza();
                     break;
 
                 case 1:

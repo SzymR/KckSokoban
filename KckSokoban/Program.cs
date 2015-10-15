@@ -10,6 +10,7 @@ namespace KckSokoban
     {
         static void Main(string[] args)
         {
+            
             int i = 0;
             Menu menu = new Menu();
             menu.rysujMenu();
@@ -19,12 +20,27 @@ namespace KckSokoban
             while (true)
             {
                 ConsoleKeyInfo kb = Console.ReadKey();
-                if (kb.Key == ConsoleKey.DownArrow)
-                    kursor.ustawKursor(++i);
-                if (kb.Key == ConsoleKey.Enter)
-                    menu.wyborAkcji(i);
-                if (kb.Key == ConsoleKey.UpArrow)
-                    kursor.ustawKursor(i=i+2);
+                if (obecneOknoStaticClass.aktualneOkno == 1)
+                {
+                    if (kb.Key == ConsoleKey.DownArrow)
+                        kursor.ustawKursor2(++i);
+                    if (kb.Key == ConsoleKey.Enter)
+                        menu.wyborAkcji(i);
+                    if (kb.Key == ConsoleKey.UpArrow)
+                        kursor.ustawKursor2(i = i + 2);
+                }
+                if (obecneOknoStaticClass.aktualneOkno == 2)
+                {
+                    if (kb.Key == ConsoleKey.DownArrow)
+                        Menu.nowaPlansza2.ruszaj('d');
+                    if (kb.Key == ConsoleKey.UpArrow)
+                        Menu.nowaPlansza2.ruszaj('g');
+                    if (kb.Key == ConsoleKey.LeftArrow)
+                        Menu.nowaPlansza2.ruszaj('l');
+                    if (kb.Key == ConsoleKey.RightArrow)
+                        Menu.nowaPlansza2.ruszaj('p');
+                } 
+                
             }
 
 

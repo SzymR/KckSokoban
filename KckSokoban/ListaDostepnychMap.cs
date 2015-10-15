@@ -10,7 +10,7 @@ namespace KckSokoban
     {
         public ListaDostepnychMap()
         {
-            obecneOknoStaticClass.aktualneOkno = 2;
+            obecneOknoStaticClass.aktualneOkno = 3;
             Console.WriteLine("tutaj bedzie lista dostepnych map");
         }
     }

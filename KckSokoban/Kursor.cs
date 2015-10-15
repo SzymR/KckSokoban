@@ -12,27 +12,23 @@ namespace KckSokoban
 
         public Kursor()
         {
-            pozycjaKursora = 0;
-            
+            pozycjaKursora = 0;           
 
             if (obecneOknoStaticClass.aktualneOkno == 1)
             {
-                ustawKursor(0);
+                ustawKursor2(0);
             }
         }
 
 
        
         
-        public void ustawKursor (int pozycja)
+        public void ustawKursor2 (int pozycja)
         {
-            if (obecneOknoStaticClass.aktualneOkno == 1)
-            {
+            
                 pozycjaKursora = pozycja % 3;
                 rysujKursorMenu();
-            }
             
-
         }
         public void rysujKursorMenu()
         {

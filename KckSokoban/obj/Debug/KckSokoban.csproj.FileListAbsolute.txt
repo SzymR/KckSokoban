@@ -3,3 +3,4 @@ C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\
 C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Debug\KckSokoban.pdb
 C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\obj\Debug\KckSokoban.exe
 C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\obj\Debug\KckSokoban.pdb
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\obj\Debug\KckSokoban.csprojResolveAssemblyReference.cache
