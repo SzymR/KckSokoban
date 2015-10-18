@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KckSokoban
+namespace KckSokoban.Interfejsy
 {
-    public static class obecneOknoStaticClass
+    interface ListaDostepnychMap
     {
-        public static int aktualneOkno { get; set; }
+        void wybierzPlansze();
+
     }
 }

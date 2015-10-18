@@ -1,12 +1,12 @@
 ssssssssssss
 sH         s
-s     XX   s
-s          s
-s    s     s
-s    s     s
-s    s     s
+s      X   s
+s    O     s
 s          s
 s          s
-s       OO s
+s   X      s
+s          s
+s     O    s
+s          s
 s          s
 ssssssssssss

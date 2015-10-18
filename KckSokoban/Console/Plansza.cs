@@ -4,12 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KckSokoban.Interfejsy;
 
 namespace KckSokoban
 {
-     public class Plansza
+    public  class Plansza : IPlansza
     {
-         int level;
         int ilosc_skrzynek;
         int pozBohateraX;
         int pozBohateraY;
@@ -19,22 +19,23 @@ namespace KckSokoban
         obiekty[,] tablica = new obiekty[rozmiarX, rozmiarY];
         obiekty[,] wyjscia = new obiekty[rozmiarX, rozmiarY];
 
-        public Plansza()
+        public Plansza(int level=1)
         {
             Console.CursorVisible = false;
             obecneOknoStaticClass.aktualneOkno = 2;
             Console.BackgroundColor = ConsoleColor.White;
             Console.Clear();
-            wczytajPlansze(1);          
+            wczytajPlansze(level);          
         }
         public void Inicjacja()
         {
             
         }
-
-        public void wczytajPlansze(int level)
+        
+      
+        public   void wczytajPlansze(int level)
         {
-            this.level = level;
+            obecneOknoStaticClass.level = level;
             ilosc_skrzynek = 0;
             
             try
@@ -176,16 +177,11 @@ namespace KckSokoban
             }
             if (ilosc_celi == ilosc_skrzynek)
             {
-                koniecGry();
+               (this as IPlansza).koniecGry();
             }
         }
 
-        private void koniecGry()
-        {           
-            level++;
-            wczytajPlansze(level);
-            
-        }
+ 
         public void ruszaj(char gdzie)
         {
             switch (gdzie)
@@ -370,6 +366,13 @@ namespace KckSokoban
             Console.SetCursorPosition(50, 10);  // wyrzucenie kursora jest konieczne aby zapobiedz usuwaniu nastepnego pola
         }
 
+
+
+        void IPlansza.koniecGry()
+        {
+            obecneOknoStaticClass.level++;
+            wczytajPlansze(obecneOknoStaticClass.level++);
+        }
     }
     
     public enum obiekty{

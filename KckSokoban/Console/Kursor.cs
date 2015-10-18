@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KckSokoban.Interfejsy;
 
 namespace KckSokoban
 {
-    class Kursor:Menu
+    class Kursor:Menu, KckSokoban.Interfejsy.IKursor
     {
        
 
@@ -35,15 +36,16 @@ namespace KckSokoban
             switch (pozycjaKursora)
             {
                 case 0:
-                    kursor1();
+                    (this as IKursor).kursor1();
+               
                     break;
 
                 case 1:
-                    kursor2();
+                    (this as IKursor).kursor2();
                     break;
 
                 case 2:
-                    kursor3();
+                    (this as IKursor).kursor3();
                     break;
 
                 default:
@@ -51,11 +53,13 @@ namespace KckSokoban
             }
         }
 
-        private void kursor1()
+       
+
+        void Interfejsy.IKursor.kursor1()
         {
-            skasujKursor1();
-            skasujKursor2();
-            skasujKursor3();
+            (this as IKursor).skasujKursor1();
+            (this as IKursor).skasujKursor2();
+           (this as IKursor).skasujKursor3();
             Console.SetCursorPosition(26, 7);
             Console.WriteLine("╔══════════════════════════╗");
             Console.SetCursorPosition(26, 8);
@@ -78,12 +82,11 @@ namespace KckSokoban
             Console.WriteLine("╚══════════════════════════╝");
         }
 
-        private void kursor2()
+        void Interfejsy.IKursor.kursor2()
         {
-
-            skasujKursor1();
-            skasujKursor2();
-            skasujKursor3();
+            (this as IKursor).skasujKursor1();
+            (this as IKursor).skasujKursor2();
+            (this as IKursor).skasujKursor3();
             Console.SetCursorPosition(16, 12);
             Console.WriteLine("╔═════════════════════════════════════════════╗");
             Console.SetCursorPosition(16, 13);
@@ -106,11 +109,11 @@ namespace KckSokoban
             Console.WriteLine("╚═════════════════════════════════════════════╝");
         }
 
-        private void kursor3()
+        void Interfejsy.IKursor.kursor3()
         {
-            skasujKursor1();
-            skasujKursor2();
-            skasujKursor3();
+           (this as IKursor).skasujKursor1();
+            (this as IKursor).skasujKursor2();
+            (this as IKursor).skasujKursor3();
             Console.SetCursorPosition(23, 17);
             Console.WriteLine("╔════════════════════════════════╗");
             Console.SetCursorPosition(23, 18);
@@ -133,9 +136,9 @@ namespace KckSokoban
             Console.WriteLine("╚════════════════════════════════╝");
         }
 
-        private void skasujKursor1()
+        void Interfejsy.IKursor.skasujKursor1()
         {
-            Console.SetCursorPosition(26, 7);
+                  Console.SetCursorPosition(26, 7);
             Console.WriteLine("                            ");
             Console.SetCursorPosition(26, 8);
             Console.Write(" ");
@@ -156,9 +159,10 @@ namespace KckSokoban
             Console.SetCursorPosition(26, 12);
             Console.WriteLine("                            ");
         }
+        
 
-        private void skasujKursor2()
-        {            
+        void Interfejsy.IKursor.skasujKursor2()
+        {
             Console.SetCursorPosition(16, 12);
             Console.WriteLine("                                               ");
             Console.SetCursorPosition(16, 13);
@@ -181,7 +185,7 @@ namespace KckSokoban
             Console.WriteLine("                                               ");
         }
 
-        private void skasujKursor3()
+        void Interfejsy.IKursor.skasujKursor3()
         {
             Console.SetCursorPosition(23, 17);
             Console.WriteLine("                                  ");

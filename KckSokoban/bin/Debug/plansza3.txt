@@ -2,9 +2,9 @@ ssssssssssss
 sH         s
 s     XX   s
 s          s
-s    s     s
-s    s     s
-s    s     s
+s          s
+s          s
+s          s
 s          s
 s          s
 s       OO s

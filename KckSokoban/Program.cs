@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KckSokoban.Interfejsy;
 
 namespace KckSokoban
 {
@@ -12,10 +13,10 @@ namespace KckSokoban
         {
             
             int i = 0;
-            Menu menu = new Menu();
+            IMenu menu = new Menu();
             menu.rysujMenu();
             obecneOknoStaticClass.aktualneOkno = 1;
-            Kursor kursor = new Kursor();
+            IKursor kursor = new Kursor();
             
             while (true)
             {
@@ -39,6 +40,21 @@ namespace KckSokoban
                         Menu.nowaPlansza2.ruszaj('l');
                     if (kb.Key == ConsoleKey.RightArrow)
                         Menu.nowaPlansza2.ruszaj('p');
+                    if (kb.Key == ConsoleKey.Escape)
+                    {
+                        int level = obecneOknoStaticClass.level;
+                        Menu.nowaPlansza2 = new Plansza(level);
+                    }
+
+                }
+                if (obecneOknoStaticClass.aktualneOkno == 3)
+                {
+
+                    if (kb.Key == ConsoleKey.DownArrow)
+                        ListaDostepnychMap.Instance.ruch('d');
+                    if (kb.Key == ConsoleKey.UpArrow)
+                        ListaDostepnychMap.Instance.ruch('g');
+                  
                 } 
                 
             }

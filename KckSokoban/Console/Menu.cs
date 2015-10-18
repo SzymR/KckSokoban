@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KckSokoban.Interfejsy;
 
 namespace KckSokoban
 {
-    class Menu
+    class Menu : IMenu
     {
-        public static Plansza nowaPlansza2;
+        public static IPlansza nowaPlansza2;
         public Menu()
         {
             obecneOknoStaticClass.aktualneOkno = 1;
@@ -48,7 +49,7 @@ namespace KckSokoban
                           \_\/\/  |_|  \_|_| |_|_/ /_/_ 
 ");
             string check = "                            ";
-            Console.WriteLine(check.Length);
+           
             
         }
 
@@ -64,7 +65,8 @@ namespace KckSokoban
 
                 case 1:
                     Console.Clear();
-                    ListaDostepnychMap nowaLista = new ListaDostepnychMap();
+                    obecneOknoStaticClass.aktualneOkno = 3;
+                
                     break;
 
                 case 2:

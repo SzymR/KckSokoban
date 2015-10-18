@@ -4,3 +4,12 @@ C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\
 C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\obj\Debug\KckSokoban.exe
 C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\obj\Debug\KckSokoban.pdb
 C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\obj\Debug\KckSokoban.csprojResolveAssemblyReference.cache
+C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\bin\Debug\KckSokoban.exe.config
+C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\obj\Debug\KckSokoban.exe
+C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\obj\Debug\KckSokoban.pdb
+C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\bin\Debug\KckSokoban.exe
+C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\bin\Debug\KckSokoban.pdb
+C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\obj\Debug\KckSokoban.csprojResolveAssemblyReference.cache
+C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\bin\Debug\Plansze\plansza4.txt
+C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\bin\Debug\Plansze\plansza3.txt
+C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\bin\Debug\Plansze\plansza2.txt
