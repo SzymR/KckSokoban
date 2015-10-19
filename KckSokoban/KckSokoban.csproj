@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="Interfejsy\IPlansza.cs" />
     <Compile Include="Interfejsy\IKursor.cs" />
-    <Compile Include="Interfejsy\ListaDostepnychMap.cs" />
+    <Compile Include="Interfejsy\IListaDostepnychMap.cs" />
     <Compile Include="Console\Kursor.cs" />
     <Compile Include="Console\ListaDostepnychMap.cs" />
     <Compile Include="Console\Menu.cs" />

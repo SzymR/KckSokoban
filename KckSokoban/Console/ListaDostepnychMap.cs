@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KckSokoban.Interfejsy;
 
 namespace KckSokoban
 {
-    public class ListaDostepnychMap : Interfejsy.ListaDostepnychMap
+    public class ListaDostepnychMap : IListaDostepnychMap
     {
         private static ListaDostepnychMap _instance ;
         public static ListaDostepnychMap Instance
@@ -21,28 +22,31 @@ namespace KckSokoban
         public ListaDostepnychMap()
         {
             obecneOknoStaticClass.aktualneOkno = 3;
-            Console.SetCursorPosition(10, 1);
-            Console.WriteLine("  1 ");
-            Console.Write("  2 ");
-            Console.Write("  3 ");
-            Console.Write("  4 ");
+     
             
         }
 
-        public void ruch(char gdzie)
+        public void init()
         {
-
+            Console.Write("Wcisnij numer aby wybrac planszę ");
+            Console.WriteLine();
+            Console.Write(" 1 ");
+            Console.Write("  2 ");
+            Console.Write("  3 ");
+            Console.Write("  4 ");
+            Console.Write("  5 ");
+            Console.Write("  6 ");
+            Console.Write("  7 ");
         }
 
 
         public void wybierzPlansze(int level)
         {
-            Plansza plansza = new Plansza(level);
+           Menu.nowaPlansza2 = new Plansza(level);
+
+
         }
 
-        public void wybierzPlansze()
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 }

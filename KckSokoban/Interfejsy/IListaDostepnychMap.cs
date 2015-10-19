@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace KckSokoban.Interfejsy
 {
-    interface ListaDostepnychMap
+    interface IListaDostepnychMap
     {
-        void wybierzPlansze();
+         void init();
 
+         void wybierzPlansze(int level);
+    
     }
 }

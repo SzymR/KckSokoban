@@ -66,7 +66,7 @@ namespace KckSokoban
                 case 1:
                     Console.Clear();
                     obecneOknoStaticClass.aktualneOkno = 3;
-                
+                    ListaDostepnychMap.Instance.init();
                     break;
 
                 case 2:

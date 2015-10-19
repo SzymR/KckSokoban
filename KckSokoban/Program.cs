@@ -50,10 +50,20 @@ namespace KckSokoban
                 if (obecneOknoStaticClass.aktualneOkno == 3)
                 {
 
-                    if (kb.Key == ConsoleKey.DownArrow)
-                        ListaDostepnychMap.Instance.ruch('d');
-                    if (kb.Key == ConsoleKey.UpArrow)
-                        ListaDostepnychMap.Instance.ruch('g');
+                    if (kb.Key == ConsoleKey.D1)
+                        ListaDostepnychMap.Instance.wybierzPlansze(1);
+                    if (kb.Key == ConsoleKey.D2)
+                        ListaDostepnychMap.Instance.wybierzPlansze(2);
+                    if (kb.Key == ConsoleKey.D3)
+                        ListaDostepnychMap.Instance.wybierzPlansze(3);
+                    if (kb.Key == ConsoleKey.D4)
+                        ListaDostepnychMap.Instance.wybierzPlansze(4);
+                    if (kb.Key == ConsoleKey.D5)
+                        ListaDostepnychMap.Instance.wybierzPlansze(5);
+                    if (kb.Key == ConsoleKey.D6)
+                        ListaDostepnychMap.Instance.wybierzPlansze(6);
+                    if (kb.Key == ConsoleKey.D7)
+                        ListaDostepnychMap.Instance.wybierzPlansze(7);
                   
                 } 
                 
