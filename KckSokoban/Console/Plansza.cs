@@ -110,28 +110,28 @@ namespace KckSokoban
                     }
                     if (wyjscia[i, j] == obiekty.cel)
                     {
-                        
-                        Console.SetCursorPosition(i, j);
+
+                        Console.SetCursorPosition( i, j);
                         Console.BackgroundColor = ConsoleColor.Blue;
                         Console.Write(" ");
                         Console.BackgroundColor = ConsoleColor.White;
                     }
                     if (tablica[i, j] == obiekty.bohater)
                     {
-                        Console.SetCursorPosition(i, j);
+                        Console.SetCursorPosition(i,  j);
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("Y");
                     }
                     if (tablica[i, j] == obiekty.pole && wyjscia[i,j] != obiekty.cel)
                     {
-                        
-                        Console.SetCursorPosition(i, j);
+
+                        Console.SetCursorPosition( i,  j);
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.Write(" ");
                     }
                     if (tablica[i, j] == obiekty.skrzynka)
                     {
-                        Console.SetCursorPosition(i, j);
+                        Console.SetCursorPosition( i,  j);
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("X");
                     }
@@ -371,7 +371,7 @@ namespace KckSokoban
         void IPlansza.koniecGry()
         {
             obecneOknoStaticClass.level++;
-            wczytajPlansze(obecneOknoStaticClass.level++);
+            ListaDostepnychMap.Instance.wybierzPlansze(obecneOknoStaticClass.level);
         }
     }
     
