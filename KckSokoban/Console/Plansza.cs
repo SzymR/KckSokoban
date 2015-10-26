@@ -135,28 +135,46 @@ namespace KckSokoban
                     }
                     if (wyjscia[i, j] == obiekty.cel)
                     {
+<<<<<<< HEAD
                         
                         Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
+=======
+
+                        Console.SetCursorPosition( i, j);
+>>>>>>> origin/master
                         Console.BackgroundColor = ConsoleColor.Blue;
                         Console.Write(" ");
                         Console.BackgroundColor = ConsoleColor.White;
                     }
                     if (tablica[i, j] == obiekty.bohater)
                     {
+<<<<<<< HEAD
                         Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
+=======
+                        Console.SetCursorPosition(i,  j);
+>>>>>>> origin/master
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("Y");
                     }
                     if (tablica[i, j] == obiekty.pole && wyjscia[i,j] != obiekty.cel)
                     {
+<<<<<<< HEAD
                         
                         Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
+=======
+
+                        Console.SetCursorPosition( i,  j);
+>>>>>>> origin/master
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.Write(" ");
                     }
                     if (tablica[i, j] == obiekty.skrzynka)
                     {
+<<<<<<< HEAD
                         Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
+=======
+                        Console.SetCursorPosition( i,  j);
+>>>>>>> origin/master
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("X");
                     }
@@ -397,7 +415,10 @@ namespace KckSokoban
         {
             obecneOknoStaticClass.level++;
             ListaDostepnychMap.Instance.wybierzPlansze(obecneOknoStaticClass.level);
+<<<<<<< HEAD
             //wczytajPlansze(obecneOknoStaticClass.level++);
+=======
+>>>>>>> origin/master
         }
     }
     
