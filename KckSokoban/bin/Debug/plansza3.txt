@@ -1,12 +1,14 @@
-ssssssssssss
-sH         s
-s          s
-s    X     s
-s  s    s  s
-s  s    s  s
-s  s X  s  s
-s  s    s  s
-s          s
-s        O s
-s   O      s
-ssssssssssss
+sssss ssss
+sOOOs s  ssss
+sOOOsss  X  s
+sOOOOss X  Xsss
+ssOOOOss   X  s
+sssOOO ss X X s
+s ss    s  X  s
+s  ss s sss ssss
+s X sHsX  X    s
+s  X   X    X  s
+s   s X XX X sss
+s  ssssss  sss
+s ss    ssss
+sss

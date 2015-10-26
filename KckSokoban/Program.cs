@@ -45,6 +45,16 @@ namespace KckSokoban
                         int level = obecneOknoStaticClass.level;
                         Menu.nowaPlansza2 = new Plansza(level);
                     }
+                    if (kb.Key == ConsoleKey.Backspace)
+                    {
+                        obecneOknoStaticClass.aktualneOkno = 1;
+                        
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.Clear();
+                        menu.rysujMenu();
+                        kursor.ustawKursor2(0);
+                    }
 
                 }
                 if (obecneOknoStaticClass.aktualneOkno == 3)
@@ -65,12 +75,26 @@ namespace KckSokoban
                     if (kb.Key == ConsoleKey.D7)
                         ListaDostepnychMap.Instance.wybierzPlansze(7);
                   
-                } 
+                }
+                if (obecneOknoStaticClass.aktualneOkno == 4)
+                {
+                    if (kb.Key == ConsoleKey.Backspace)
+                    {
+                        Win_Animation.thr.Abort();
+                        obecneOknoStaticClass.aktualneOkno = 1;
+                        Console.Clear();
+
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.Clear();
+                        menu.rysujMenu();
+                        kursor.ustawKursor2(0);
+                    }
+                }
                 
             }
 
 
-            Console.ReadKey();
         }
     }
 }

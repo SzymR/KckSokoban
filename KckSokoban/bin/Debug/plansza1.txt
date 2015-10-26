@@ -1,12 +1,6 @@
 ssssssssssss
-sH         s
-s    XXX   s
-s          s
-s          s
-s   sss    s
-s          s
-s    X     s
-s   OO     s
-s       OO s
-s          s
+sss  sssssss
+ss      X ss
+ss s   sX ss
+ss O  OsH ss
 ssssssssssss

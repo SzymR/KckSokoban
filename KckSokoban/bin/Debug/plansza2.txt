@@ -1,12 +1,8 @@
-ssssssssssss
-sH         s
-s     XX   s
-s          s
-s    s     s
-s    s     s
-s    s     s
-s          s
-s          s
-s       OO s
-s          s
-ssssssssssss
+  sss
+  sOs
+  s ssss
+sssX XOs
+sO XHsss
+ssssXs
+   sOs
+   sss

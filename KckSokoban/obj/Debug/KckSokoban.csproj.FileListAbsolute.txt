@@ -13,3 +13,6 @@ C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\obj\Debug\KckSokoban.csprojResolv
 C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\bin\Debug\Plansze\plansza4.txt
 C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\bin\Debug\Plansze\plansza3.txt
 C:\Users\W\Source\Repos\KckSokoban2\KckSokoban\bin\Debug\Plansze\plansza2.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Debug\Plansze\plansza4.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Debug\Plansze\plansza3.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Debug\Plansze\plansza2.txt
