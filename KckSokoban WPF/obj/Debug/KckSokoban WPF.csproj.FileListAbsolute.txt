@@ -1,0 +1,18 @@
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Debug\KckSokoban WPF.exe.config
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Debug\Plansze\plansza4.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Debug\Plansze\plansza3.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Debug\Plansze\plansza2.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Debug\KckSokoban WPF.exe
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Debug\KckSokoban WPF.pdb
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Debug\KckSokoban.exe
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Debug\KckSokoban.pdb
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Debug\KckSokoban WPF.csprojResolveAssemblyReference.cache
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Debug\MainWindow.baml
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Debug\App.g.cs
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Debug\KckSokoban WPF_MarkupCompile.cache
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Debug\KckSokoban WPF.g.resources
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Debug\KckSokoban_WPF.Properties.Resources.resources
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Debug\KckSokoban WPF.csproj.GenerateResource.Cache
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Debug\KckSokoban WPF.exe
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Debug\KckSokoban WPF.pdb

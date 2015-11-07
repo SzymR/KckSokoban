@@ -8,7 +8,7 @@ using KckSokoban.Interfejsy;
 
 namespace KckSokoban
 {
-    public  class Plansza : IPlansza
+    public class Plansza : IPlansza
     {
         int ilosc_skrzynek;
         int pozBohateraX;
@@ -18,12 +18,12 @@ namespace KckSokoban
         int przesuniecie = 5;
         int przesuniecieX = 30;
 
-        
+
 
         obiekty[,] tablica = new obiekty[rozmiarX, rozmiarY];
         obiekty[,] wyjscia = new obiekty[rozmiarX, rozmiarY];
 
-        public Plansza(int level=1)
+        public Plansza(int level = 1)
         {
             Console.CursorVisible = false;
             obecneOknoStaticClass.aktualneOkno = 2;
@@ -36,20 +36,20 @@ namespace KckSokoban
                 Console.Write("Poziom: " + level);
             }
         }
-        public void Inicjacja()
+        public string Inicjacja()
         {
-            
+            return "ksfh";
         }
-        
-      
-        public   void wczytajPlansze(int level)
+
+
+        public void wczytajPlansze(int level)
         {
             obecneOknoStaticClass.level = level;
             ilosc_skrzynek = 0;
             int maxLegnthX = 0;
             int maxLengthY = 0;
             int temp = 0;
-            
+
             try
             {
                 // Create an instance of StreamReader to read from a file.
@@ -57,15 +57,15 @@ namespace KckSokoban
                 using (StreamReader sr = new StreamReader("plansza" + level + ".txt"))
                 {
                     string line;
-                    int numerLini =0;
+                    int numerLini = 0;
                     // Read and display lines from the file until the end of 
                     // the file is reached.
-                    
+
                     while ((line = sr.ReadLine()) != null)
                     {
                         temp = 0;
                         maxLengthY++;
-                        
+
                         int dlugoscLini = line.Length;
                         for (int i = 0; i < dlugoscLini; i++)
                         {
@@ -101,11 +101,11 @@ namespace KckSokoban
                         {
                             maxLegnthX = temp;
                         }
-                        numerLini++;                            
+                        numerLini++;
                     }
                 }
-                przesuniecieX = Convert.ToInt32(40 - (0.5*maxLegnthX));
-                przesuniecie = Convert.ToInt32(12-(0.5*maxLengthY));
+                przesuniecieX = Convert.ToInt32(40 - (0.5 * maxLegnthX));
+                przesuniecie = Convert.ToInt32(12 - (0.5 * maxLengthY));
                 rysujPlansze();
             }
             catch (Exception e)
@@ -115,75 +115,57 @@ namespace KckSokoban
                 obecneOknoStaticClass.aktualneOkno = 4;
                 Win_Animation.watek();
                 Win_Animation.thr.Start();
-              //  Console.WriteLine(e.Message);
+                //  Console.WriteLine(e.Message);
             }
-            
+
         }
 
         public void rysujPlansze()
         {
-            
+
             for (int i = 0; i < rozmiarX; i++)
             {
                 for (int j = 0; j < rozmiarY; j++)
                 {
                     if (tablica[i, j] == obiekty.sciana)
                     {
-                        Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
+                        Console.SetCursorPosition(i + przesuniecieX, j + przesuniecie);
                         Console.ForegroundColor = ConsoleColor.Gray;
                         Console.Write("█");
                     }
                     if (wyjscia[i, j] == obiekty.cel)
                     {
-<<<<<<< HEAD
-                        
-                        Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
-=======
 
-                        Console.SetCursorPosition( i, j);
->>>>>>> origin/master
+                        Console.SetCursorPosition(i + przesuniecieX, j + przesuniecie);
                         Console.BackgroundColor = ConsoleColor.Blue;
                         Console.Write(" ");
                         Console.BackgroundColor = ConsoleColor.White;
                     }
                     if (tablica[i, j] == obiekty.bohater)
                     {
-<<<<<<< HEAD
-                        Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
-=======
-                        Console.SetCursorPosition(i,  j);
->>>>>>> origin/master
+                        Console.SetCursorPosition(i + przesuniecieX, j + przesuniecie);
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("Y");
                     }
-                    if (tablica[i, j] == obiekty.pole && wyjscia[i,j] != obiekty.cel)
+                    if (tablica[i, j] == obiekty.pole && wyjscia[i, j] != obiekty.cel)
                     {
-<<<<<<< HEAD
-                        
-                        Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
-=======
 
-                        Console.SetCursorPosition( i,  j);
->>>>>>> origin/master
+                        Console.SetCursorPosition(i + przesuniecieX, j + przesuniecie);
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.Write(" ");
                     }
                     if (tablica[i, j] == obiekty.skrzynka)
                     {
-<<<<<<< HEAD
-                        Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
-=======
-                        Console.SetCursorPosition( i,  j);
->>>>>>> origin/master
+                        Console.SetCursorPosition(i + przesuniecieX, j + przesuniecie);
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("X");
                     }
                 }
-            }            
+            }
         }
         public void odswierzCele() // metoda odswieze cele aby nie były nadpisane przez przyslaniajace je obiekty (X/Y na niebieskim tle)
         {
-            
+
             int ilosc_celi = 0;
             for (int i = 0; i < rozmiarX; i++)
             {
@@ -191,7 +173,7 @@ namespace KckSokoban
                 {
                     if ((wyjscia[i, j] == obiekty.cel) && tablica[i, j] == obiekty.bohater)
                     {
-                        Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
+                        Console.SetCursorPosition(i + przesuniecieX, j + przesuniecie);
                         Console.BackgroundColor = ConsoleColor.Blue;
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("Y");
@@ -200,7 +182,7 @@ namespace KckSokoban
                     }
                     if ((wyjscia[i, j] == obiekty.cel) && tablica[i, j] == obiekty.skrzynka)
                     {
-                        Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
+                        Console.SetCursorPosition(i + przesuniecieX, j + przesuniecie);
                         Console.BackgroundColor = ConsoleColor.Blue;
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("X");
@@ -210,7 +192,7 @@ namespace KckSokoban
                     }
                     if ((wyjscia[i, j] == obiekty.cel) && tablica[i, j] == obiekty.pole)
                     {
-                        Console.SetCursorPosition(i+przesuniecieX, j+przesuniecie);
+                        Console.SetCursorPosition(i + przesuniecieX, j + przesuniecie);
                         Console.BackgroundColor = ConsoleColor.Blue;
                         Console.Write(" ");
                         Console.BackgroundColor = ConsoleColor.White;
@@ -220,63 +202,65 @@ namespace KckSokoban
             }
             if (ilosc_celi == ilosc_skrzynek)
             {
-               (this as IPlansza).koniecGry();
+                (this as IPlansza).koniecGry();
             }
         }
 
- 
+
         public void ruszaj(char gdzie)
         {
             switch (gdzie)
             {
                 case 'l': // lewo
-                    if(tablica[pozBohateraX-1,pozBohateraY]==obiekty.pole){
-                        tablica[pozBohateraX-1,pozBohateraY]=obiekty.bohater;
-                        tablica[pozBohateraX,pozBohateraY]=obiekty.pole;
-                        odswierz(pozBohateraX-1, pozBohateraY);
+                    if (tablica[pozBohateraX - 1, pozBohateraY] == obiekty.pole)
+                    {
+                        tablica[pozBohateraX - 1, pozBohateraY] = obiekty.bohater;
+                        tablica[pozBohateraX, pozBohateraY] = obiekty.pole;
+                        odswierz(pozBohateraX - 1, pozBohateraY);
                         pozBohateraX--;
                         if ((tablica[pozBohateraX, pozBohateraY] == obiekty.bohater) && (wyjscia[pozBohateraX, pozBohateraY] == obiekty.cel))
                         {
-                            Console.SetCursorPosition(pozBohateraX+przesuniecieX, pozBohateraY+przesuniecie);
+                            Console.SetCursorPosition(pozBohateraX + przesuniecieX, pozBohateraY + przesuniecie);
                             Console.BackgroundColor = ConsoleColor.Blue;
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.Write("Y");
                             Console.BackgroundColor = ConsoleColor.White;
                             Console.SetCursorPosition(1, 1);
                         }
-                        
+
                     }
-                    else if(tablica[pozBohateraX-1,pozBohateraY]==obiekty.skrzynka && tablica[pozBohateraX-2,pozBohateraY]==obiekty.pole)
+                    else if (tablica[pozBohateraX - 1, pozBohateraY] == obiekty.skrzynka && tablica[pozBohateraX - 2, pozBohateraY] == obiekty.pole)
                     {
                         tablica[pozBohateraX, pozBohateraY] = obiekty.pole;
                         tablica[pozBohateraX - 1, pozBohateraY] = obiekty.bohater;
-                        Console.SetCursorPosition(pozBohateraX - 1+przesuniecieX, pozBohateraY+przesuniecie);
+                        Console.SetCursorPosition(pozBohateraX - 1 + przesuniecieX, pozBohateraY + przesuniecie);
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("Y");
                         tablica[pozBohateraX - 2, pozBohateraY] = obiekty.skrzynka;
-                        
-                        Console.SetCursorPosition(pozBohateraX - 2+przesuniecieX, pozBohateraY+przesuniecie);
+
+                        Console.SetCursorPosition(pozBohateraX - 2 + przesuniecieX, pozBohateraY + przesuniecie);
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("X");
-                        Console.SetCursorPosition(pozBohateraX+przesuniecieX, pozBohateraY+przesuniecie);
+                        Console.SetCursorPosition(pozBohateraX + przesuniecieX, pozBohateraY + przesuniecie);
                         Console.Write(" ");
                         Console.SetCursorPosition(1, 1);
                         Console.Write(" ");
                         pozBohateraX--;
-                        
+
 
                     }
                     odswierzCele();
                     break;
-                case'p': // prawo
-                    if(tablica[pozBohateraX+1,pozBohateraY]==obiekty.pole){
-                        tablica[pozBohateraX+1,pozBohateraY]=obiekty.bohater;
-                        tablica[pozBohateraX,pozBohateraY]=obiekty.pole;
-                        odswierz(pozBohateraX+1, pozBohateraY);
+                case 'p': // prawo
+                    if (tablica[pozBohateraX + 1, pozBohateraY] == obiekty.pole)
+                    {
+                        tablica[pozBohateraX + 1, pozBohateraY] = obiekty.bohater;
+                        tablica[pozBohateraX, pozBohateraY] = obiekty.pole;
+                        odswierz(pozBohateraX + 1, pozBohateraY);
                         pozBohateraX++;
                         if ((tablica[pozBohateraX, pozBohateraY] == obiekty.bohater) && (wyjscia[pozBohateraX, pozBohateraY] == obiekty.cel))
                         {
-                            Console.SetCursorPosition(pozBohateraX+przesuniecieX, pozBohateraY+przesuniecie);
+                            Console.SetCursorPosition(pozBohateraX + przesuniecieX, pozBohateraY + przesuniecie);
                             Console.BackgroundColor = ConsoleColor.Blue;
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.Write("Y");
@@ -288,33 +272,33 @@ namespace KckSokoban
                     {
                         tablica[pozBohateraX, pozBohateraY] = obiekty.pole;
                         tablica[pozBohateraX + 1, pozBohateraY] = obiekty.bohater;
-                        Console.SetCursorPosition(pozBohateraX + 1+przesuniecieX, pozBohateraY+przesuniecie);
+                        Console.SetCursorPosition(pozBohateraX + 1 + przesuniecieX, pozBohateraY + przesuniecie);
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("Y");
                         tablica[pozBohateraX + 2, pozBohateraY] = obiekty.skrzynka;
 
-                        Console.SetCursorPosition(pozBohateraX + 2+przesuniecieX, pozBohateraY+przesuniecie);
+                        Console.SetCursorPosition(pozBohateraX + 2 + przesuniecieX, pozBohateraY + przesuniecie);
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("X");
-                        Console.SetCursorPosition(pozBohateraX+przesuniecieX, pozBohateraY+przesuniecie);
+                        Console.SetCursorPosition(pozBohateraX + przesuniecieX, pozBohateraY + przesuniecie);
                         Console.Write(" ");
                         Console.SetCursorPosition(1, 1);
                         Console.Write(" ");
                         pozBohateraX++;
-                        
+
                     }
                     odswierzCele();
                     break;
                 case 'g': // gora
-                    if (tablica[pozBohateraX, pozBohateraY-1] == obiekty.pole)
+                    if (tablica[pozBohateraX, pozBohateraY - 1] == obiekty.pole)
                     {
-                        tablica[pozBohateraX, pozBohateraY-1] = obiekty.bohater;
+                        tablica[pozBohateraX, pozBohateraY - 1] = obiekty.bohater;
                         tablica[pozBohateraX, pozBohateraY] = obiekty.pole;
                         odswierz(pozBohateraX, pozBohateraY - 1);
                         pozBohateraY--;
                         if ((tablica[pozBohateraX, pozBohateraY] == obiekty.bohater) && (wyjscia[pozBohateraX, pozBohateraY] == obiekty.cel))
                         {
-                            Console.SetCursorPosition(pozBohateraX+przesuniecieX, pozBohateraY+przesuniecie);
+                            Console.SetCursorPosition(pozBohateraX + przesuniecieX, pozBohateraY + przesuniecie);
                             Console.BackgroundColor = ConsoleColor.Blue;
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.Write("Y");
@@ -322,24 +306,24 @@ namespace KckSokoban
                             Console.SetCursorPosition(1, 1);
                         }
                     }
-                    else if (tablica[pozBohateraX, pozBohateraY-1] == obiekty.skrzynka && tablica[pozBohateraX, pozBohateraY-2] == obiekty.pole)
+                    else if (tablica[pozBohateraX, pozBohateraY - 1] == obiekty.skrzynka && tablica[pozBohateraX, pozBohateraY - 2] == obiekty.pole)
                     {
                         tablica[pozBohateraX, pozBohateraY] = obiekty.pole;
-                        tablica[pozBohateraX, pozBohateraY-1] = obiekty.bohater;
-                        Console.SetCursorPosition(pozBohateraX+przesuniecieX, pozBohateraY-1+przesuniecie);
+                        tablica[pozBohateraX, pozBohateraY - 1] = obiekty.bohater;
+                        Console.SetCursorPosition(pozBohateraX + przesuniecieX, pozBohateraY - 1 + przesuniecie);
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("Y");
-                        tablica[pozBohateraX, pozBohateraY-2] = obiekty.skrzynka;
+                        tablica[pozBohateraX, pozBohateraY - 2] = obiekty.skrzynka;
 
-                        Console.SetCursorPosition(pozBohateraX+przesuniecieX, pozBohateraY-2+przesuniecie);
+                        Console.SetCursorPosition(pozBohateraX + przesuniecieX, pozBohateraY - 2 + przesuniecie);
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("X");
-                        Console.SetCursorPosition(pozBohateraX+przesuniecieX, pozBohateraY+przesuniecie);
+                        Console.SetCursorPosition(pozBohateraX + przesuniecieX, pozBohateraY + przesuniecie);
                         Console.Write(" ");
                         Console.SetCursorPosition(1, 1);
                         Console.Write(" ");
                         pozBohateraY--;
-                        
+
                     }
                     odswierzCele();
                     break;
@@ -358,7 +342,7 @@ namespace KckSokoban
                             Console.BackgroundColor = ConsoleColor.White;
                             Console.SetCursorPosition(1, 1);
                         }
-                      
+
                     }
                     else if (tablica[pozBohateraX, pozBohateraY + 1] == obiekty.skrzynka && tablica[pozBohateraX, pozBohateraY + 2] == obiekty.pole)
                     {
@@ -377,7 +361,7 @@ namespace KckSokoban
                         Console.SetCursorPosition(1, 1);
                         Console.Write(" ");
                         pozBohateraY++;
-                        
+
                     }
                     odswierzCele();
                     break;
@@ -401,11 +385,11 @@ namespace KckSokoban
             }
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("Y");
-         //   if(tablica[pozBohateraX+1,pozBohateraY] == obiekty.sciana){
-         //       Console.SetCursorPosition(pozBohateraX + 1, pozBohateraY);
-          //      Console.Write("█");
-                
-         //   }
+            //   if(tablica[pozBohateraX+1,pozBohateraY] == obiekty.sciana){
+            //       Console.SetCursorPosition(pozBohateraX + 1, pozBohateraY);
+            //      Console.Write("█");
+
+            //   }
             Console.SetCursorPosition(1, 1);  // wyrzucenie kursora jest konieczne aby zapobiedz usuwaniu nastepnego pola
         }
 
@@ -415,14 +399,12 @@ namespace KckSokoban
         {
             obecneOknoStaticClass.level++;
             ListaDostepnychMap.Instance.wybierzPlansze(obecneOknoStaticClass.level);
-<<<<<<< HEAD
             //wczytajPlansze(obecneOknoStaticClass.level++);
-=======
->>>>>>> origin/master
         }
     }
-    
-    public enum obiekty{
+
+    public enum obiekty
+    {
         skrzynka = 1, cel = 2, bohater = 3, sciana = 4, pole = 5
     }
 }

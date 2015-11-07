@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KckSokoban.Interfejsy
 {
-    interface IPlansza
+    public interface IPlansza
     {
       
         void wczytajPlansze(int level);

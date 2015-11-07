@@ -1,0 +1,8 @@
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Release\Plansze\plansza4.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Release\Plansze\plansza3.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Release\Plansze\plansza2.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Release\KckSokoban.exe.config
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Release\KckSokoban.exe
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\bin\Release\KckSokoban.pdb
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\obj\Release\KckSokoban.exe
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban\obj\Release\KckSokoban.pdb

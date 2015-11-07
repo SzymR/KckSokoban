@@ -1,0 +1,18 @@
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Release\KckSokoban WPF.exe.config
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Release\Plansze\plansza4.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Release\Plansze\plansza3.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Release\Plansze\plansza2.txt
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Release\KckSokoban WPF.exe
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Release\KckSokoban WPF.pdb
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Release\KckSokoban.exe
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\bin\Release\KckSokoban.pdb
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Release\KckSokoban WPF.csprojResolveAssemblyReference.cache
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Release\MainWindow.baml
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Release\MainWindow.g.cs
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Release\App.g.cs
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Release\KckSokoban WPF_MarkupCompile.cache
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Release\KckSokoban WPF.g.resources
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Release\KckSokoban_WPF.Properties.Resources.resources
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Release\KckSokoban WPF.csproj.GenerateResource.Cache
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Release\KckSokoban WPF.exe
+C:\Users\Szymon\Documents\Visual Studio 2013\Projects\KckSokoban\KckSokoban WPF\obj\Release\KckSokoban WPF.pdb
