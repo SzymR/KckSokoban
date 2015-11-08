@@ -58,6 +58,8 @@
     <Compile Include="Pionki\Sciana.cs" />
     <Compile Include="Pionki\PustePole.cs" />
     <Compile Include="Pionki\Skrzynia.cs" />
+    <Compile Include="UI\MenuButton.cs" />
+    <Compile Include="UI\MenuChooseLevel.cs" />
     <Compile Include="UI\Plansza.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

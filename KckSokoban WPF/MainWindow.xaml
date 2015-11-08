@@ -6,5 +6,20 @@
     <Grid>
         <Rectangle Height="450" Width="450" Stroke="Black"/>
         <Grid Name="grid" Height="450" Width="450" SnapsToDevicePixels="True"/>
+        <Grid Name="gridMenuMain" Height="450" Width="450" SnapsToDevicePixels="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.9*"/>
+            </Grid.RowDefinitions>
+         
+            <Grid Name="header"></Grid>
+            <Grid Grid.Row="1" Name="gridMenu"  Margin="2" Width="450" SnapsToDevicePixels="True">
+
+            </Grid>
+            <Grid Grid.Row="1" Name="gridMenuChooseLevel"  Margin="2" Width="450" SnapsToDevicePixels="True">
+
+            </Grid>
+        </Grid>
+    
     </Grid>
 </Window>

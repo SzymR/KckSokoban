@@ -26,18 +26,18 @@ namespace KckSokoban.UI
         obiekty[,] wyjscia = new obiekty[rozmiarX, rozmiarY];
 
         public void Inicjalizuj() {
-            for (int i = 0; i < oknoGry.grid.Width / oknoGry.Size; i++)
-            {
-                ColumnDefinition columnDefinitions = new ColumnDefinition();
-                columnDefinitions.Width = new GridLength(oknoGry.Size);
-                oknoGry.grid.ColumnDefinitions.Add(columnDefinitions);
-            }
-            for (int j = 0; j < oknoGry.grid.Height / oknoGry.Size; j++)
-            {
-                RowDefinition rowDefinition = new RowDefinition();
-                rowDefinition.Height = new GridLength(oknoGry.Size);
-                oknoGry.grid.RowDefinitions.Add(rowDefinition);
-            }
+            //for (int i = 0; i < oknoGry.grid.Width / oknoGry.Size; i++)
+            //{
+            //    ColumnDefinition columnDefinitions = new ColumnDefinition();
+            //    columnDefinitions.Width = new GridLength(oknoGry.Size);
+            //    oknoGry.grid.ColumnDefinitions.Add(columnDefinitions);
+            //}
+            //for (int j = 0; j < oknoGry.grid.Height / oknoGry.Size; j++)
+            //{
+            //    RowDefinition rowDefinition = new RowDefinition();
+            //    rowDefinition.Height = new GridLength(oknoGry.Size);
+            //    oknoGry.grid.RowDefinitions.Add(rowDefinition);
+            //}
         }
         public void wczytajPlansze(int level)
         {
