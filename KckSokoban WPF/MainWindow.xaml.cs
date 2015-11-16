@@ -36,6 +36,7 @@ namespace KckSokoban_WPF
         obiekty[,] wyjscia = new obiekty[rozmiarX, rozmiarY];
         public readonly int Size=25;
         public int level = 1;
+        TextBlock item;
 
         public int currentWindow = 0; ///0-menu, 1 - gra, 2-wybierz level
         public int positionMenu = 0;
@@ -125,17 +126,27 @@ namespace KckSokoban_WPF
 
         private void exit_click(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("exit");
+            Application.Current.Shutdown();
         }
 
         private void wczytaj_click(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("wczytaj");
+            currentWindow = 2;
+            positionMenu = 0;
+            gridMenuChooseLevel.Visibility = Visibility.Visible;
+            gridMenu.Visibility = System.Windows.Visibility.Hidden;
+            grid.Visibility = System.Windows.Visibility.Hidden;
+            ColorChooseLevel(0, 1);
         }
 
         private void start_click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("start");
+            currentWindow = 1;
+            positionMenu = 0;
+            level = 1;
+            wczytajPlansze(level);
+            gridMenuMain.Visibility = System.Windows.Visibility.Hidden;
+            grid.Visibility = System.Windows.Visibility.Visible;
         }
         
 
@@ -344,10 +355,11 @@ namespace KckSokoban_WPF
                             gridMenuChooseLevel.Visibility = Visibility.Visible;
                             gridMenu.Visibility = System.Windows.Visibility.Hidden;
                             grid.Visibility= System.Windows.Visibility.Hidden;
-                            ColorChooseLevel(0, 1);
+                           ColorChooseLevel(0, 1);
 
                             break;
                         case 2:
+                            Application.Current.Shutdown();
                             break;
 
 
@@ -365,7 +377,7 @@ namespace KckSokoban_WPF
                     PowrotDoMenu();
 
                 }
-                if (e.Key == Key.Down)
+                if (e.Key == Key.Right)
                 {
                     var prev = positionMenu;
 
@@ -377,7 +389,7 @@ namespace KckSokoban_WPF
 
                 }
 
-                if (e.Key == Key.Up)
+                if (e.Key == Key.Left)
                 {
                     var prev = positionMenu;
 
@@ -425,12 +437,20 @@ namespace KckSokoban_WPF
 
         public void ColorChooseLevel(int current, int previous)
         {
-            ClearColorChooseLevel();
-            var item = mChL.CollectionMenuButtonImage[current];
-            var previousItem = mChL.CollectionMenuButtonImage[previous];
+            if(current<=0)
+            {
+                current = 8;
+            }
+            //current++;
+            current= current % 8;
+            item.Text = current.ToString();
 
-            item.Fill = Brushes.Purple;
-            previousItem.Fill = Brushes.Aqua;
+            //ClearColorChooseLevel();
+            //var item = mChL.CollectionMenuButtonImage[current];
+            //var previousItem = mChL.CollectionMenuButtonImage[previous];
+
+            //item.Fill = Brushes.Purple;
+            //previousItem.Fill = Brushes.Aqua;
 
         }
         public void ClearColorChooseLevel()
@@ -705,27 +725,83 @@ namespace KckSokoban_WPF
             }
 
 
-            mChL = new MenuChooseLevel(gridMenu.Height, gridMenu.Width);
+            mChL = new MenuChooseLevel(gridMenu.Height, gridMenu.Width, gridMenuChooseLevel);
 
 
             for (int i = 0; i < mChL.CollectionMenuButton.Count; i++)
             {
-                RowDefinition rowDefinition = new RowDefinition();
+                ColumnDefinition rowDefinition = new ColumnDefinition();
 
-                rowDefinition.Height = new GridLength(1, GridUnitType.Star);
+                rowDefinition.Width = new GridLength(1, GridUnitType.Star);
 
-                gridMenuChooseLevel.RowDefinitions.Add(rowDefinition);
+                gridMenuChooseLevel.ColumnDefinitions.Add(rowDefinition);
 
-                Grid item = mChL.CollectionMenuButton[i];
-
-                gridMenuChooseLevel.Children.Add(item);
-                Grid.SetRow(item, i);
+                TextBlock curr  = mChL.CollectionMenuButton[i];
+                if(i==0)
+                {
+                    curr.MouseDown += curr_MouseDown;
+                }
+                if(i==1)
+                {
+                    item = mChL.CollectionMenuButton[i];
+                    item.MouseDown += item_MouseDownEN;
+                }
+                if (i == 2)
+                {
+                    curr.MouseDown += item_MouseDownri;
+                }
+                gridMenuChooseLevel.Children.Add(curr);
+                Grid.SetColumn(curr, i);
 
 
             }
 
             gridMenuChooseLevel.Visibility = Visibility.Hidden;
 
+        }
+
+        void item_MouseDownEN(object sender, MouseButtonEventArgs e)
+        {
+            level = positionMenu + 1;
+            wczytajPlansze(level);
+
+            positionMenu = 0;
+            currentWindow = 1;
+            gridMenuMain.Visibility = System.Windows.Visibility.Hidden;
+            grid.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        void item_MouseDownri(object sender, MouseButtonEventArgs e)
+        {
+            
+            var prev = positionMenu;
+
+                    positionMenu++;
+                    positionMenu = positionMenu % 7;
+                    ColorChooseLevel(positionMenu, prev);
+
+
+
+                
+
+                
+                
+
+          
+        }
+
+        void curr_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var prev = positionMenu;
+
+            positionMenu--;
+            if (positionMenu == -1 || positionMenu == -2)
+            {
+                prev = 0;
+                positionMenu = 6;
+            }
+
+            ColorChooseLevel(positionMenu, prev);
         }
         public void Inicjalizuj()
         {

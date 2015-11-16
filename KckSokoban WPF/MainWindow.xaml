@@ -14,7 +14,7 @@
 
             <Grid Name="header">
                 
-                <Rectangle Name="myrect" Width="1" Height="1">
+                <Rectangle Margin="0,18,0,0" Name="myrect" Width="150" Height="150">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Image/b.png" Stretch="Uniform"/>
                     </Rectangle.Fill>
@@ -29,15 +29,19 @@
                         />-->
                                     
                                     <DoubleAnimation Storyboard.TargetName="myrect" 
-                       Storyboard.TargetProperty="Width" From="1" To="350" 
-                       Duration="0:0:1" BeginTime="0:0:0"/>
+                       Storyboard.TargetProperty="Width" From="150" To="350" 
+                       Duration="0:0:1" BeginTime="0:0:0" AutoReverse="True" />
                                     <DoubleAnimation Storyboard.TargetName="myrect" 
-                       Storyboard.TargetProperty="Height" From="1" To="250" 
-                       Duration="0:0:1" BeginTime="0:0:1"/>
+                       Storyboard.TargetProperty="Height" From="150" To="250" 
+                       Duration="0:0:1" BeginTime="0:0:1" AutoReverse="True"  />
                                   
-                                    <DoubleAnimation Storyboard.TargetName="myrect" 
-                       Storyboard.TargetProperty="Width" From="350" To="1" 
+                                    <!--<DoubleAnimation Storyboard.TargetName="myrect" 
+                       Storyboard.TargetProperty="Width" From="350" To="50" 
                        Duration="0:0:1" BeginTime="0:0:3"/>
+                                    <DoubleAnimation Storyboard.TargetName="myrect" 
+                       Storyboard.TargetProperty="Height" From="250" To="50" 
+                       Duration="0:0:1" BeginTime="0:0:1"/>-->
+
                                 </Storyboard>
                             </BeginStoryboard>
                         </EventTrigger>

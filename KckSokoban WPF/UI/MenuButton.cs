@@ -103,10 +103,12 @@ namespace KckSokoban_WPF.UI
             text.VerticalAlignment = System.Windows.VerticalAlignment.Top;
 
             Header.Children.Add(text);
+            Header.Margin = new Thickness(0, 10, 0, 0);
+            
 
             DoubleAnimation myDoubleAnimation = new DoubleAnimation();
             myDoubleAnimation.From = 1.0;
-            myDoubleAnimation.To = 0.0;
+            myDoubleAnimation.To = 0.4;
             
             myDoubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(2));
             myDoubleAnimation.AutoReverse = true;
