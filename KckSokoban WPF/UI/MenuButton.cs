@@ -100,7 +100,7 @@ namespace KckSokoban_WPF.UI
             text.FontSize = 30;
             text.FontFamily = new FontFamily("Comic Sans");
             text.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
-            text.VerticalAlignment = System.Windows.VerticalAlignment.Center;
+            text.VerticalAlignment = System.Windows.VerticalAlignment.Top;
 
             Header.Children.Add(text);
 

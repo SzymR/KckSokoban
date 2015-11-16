@@ -16,6 +16,7 @@ using KckSokoban.Interfejsy;
 using System.IO;
 using KckSokoban_WPF.Pionki;
 using KckSokoban_WPF.UI;
+using System.Windows.Media.Animation;
 
 namespace KckSokoban_WPF
 {
@@ -48,6 +49,93 @@ namespace KckSokoban_WPF
             PierwszaInicjalizacja();
             ColorChooseMenu(0, 1);
            // wczytajPlansze(level);
+            CreateAnimationHead();
+            var item = mb.CollectionMenuButtonImage[0];
+            item.MouseDown += new MouseButtonEventHandler(start_click);
+            var item2 = mb.CollectionMenuButtonImage[1];
+            item2.MouseDown += new MouseButtonEventHandler(wczytaj_click);
+            var item3 = mb.CollectionMenuButtonImage[2];
+            item3.MouseDown += new MouseButtonEventHandler(exit_click);
+            item.MouseEnter += new MouseEventHandler(start_pos);
+            item2.MouseEnter += new MouseEventHandler(wczytaj_pos);
+            item3.MouseEnter += new MouseEventHandler(exit_pos);
+        }
+        private void start_pos(object sender, MouseEventArgs e)
+        {
+            var item = mb.CollectionMenuButtonImage[0];
+            var item2 = mb.CollectionMenuButtonImage[1];
+            var item3 = mb.CollectionMenuButtonImage[2];
+            item.Fill = new ImageBrush()
+            {
+                ImageSource = new BitmapImage(new Uri(@"tlo.png", UriKind.Relative))
+            };
+            item2.Fill = Brushes.Aqua;
+            item3.Fill = Brushes.Aqua;
+        }
+
+        public void CreateAnimationHead()
+        {
+           // VisualTreeHelper.GetOffset
+            var target = Head;
+    //var top = VisualTreeHelper.GetOffset(target);
+    //var left = VisualTreeHelper.GetOffset(target);
+    //TranslateTransform trans = new TranslateTransform();
+    //Head.RenderTransform = trans;
+    //DoubleAnimation anim1 = new DoubleAnimation(3,10, TimeSpan.FromSeconds(10));
+    //DoubleAnimation anim2 = new DoubleAnimation(3, 10, TimeSpan.FromSeconds(10));
+    //Head.BeginAnimation(TranslateTransform.XProperty, anim1);
+    //Head.BeginAnimation(TranslateTransform.YProperty, anim2);
+
+    DoubleAnimation myDoubleAnimation = new DoubleAnimation();
+    myDoubleAnimation.From = -550;
+    myDoubleAnimation.To = 0.0;
+
+    myDoubleAnimation.Duration = new Duration(TimeSpan.FromSeconds(2));
+    myDoubleAnimation.AutoReverse = true;
+    myDoubleAnimation.RepeatBehavior = RepeatBehavior.Forever;
+    //  myStoryboard = new Storyboard();
+    // myStoryboard.Children.Add(myDoubleAnimation);
+
+    Head.BeginAnimation(TranslateTransform.XProperty, myDoubleAnimation);
+        }
+        private void wczytaj_pos(object sender, MouseEventArgs e)
+        {
+            var item = mb.CollectionMenuButtonImage[0];
+            var item2 = mb.CollectionMenuButtonImage[1];
+            var item3 = mb.CollectionMenuButtonImage[2];
+            item.Fill = Brushes.Aqua;
+            item2.Fill = new ImageBrush()
+            {
+                ImageSource = new BitmapImage(new Uri(@"tlo.png", UriKind.Relative))
+            };
+            item3.Fill = Brushes.Aqua;
+        }
+        private void exit_pos(object sender, MouseEventArgs e)
+        {
+            var item = mb.CollectionMenuButtonImage[0];
+            var item2 = mb.CollectionMenuButtonImage[1];
+            var item3 = mb.CollectionMenuButtonImage[2];
+            item.Fill = Brushes.Aqua;
+            item2.Fill = Brushes.Aqua;
+            item3.Fill = new ImageBrush()
+            {
+                ImageSource = new BitmapImage(new Uri(@"tlo.png", UriKind.Relative))
+            };
+        }
+
+        private void exit_click(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("exit");
+        }
+
+        private void wczytaj_click(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("wczytaj");
+        }
+
+        private void start_click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("start");
         }
         
 
@@ -326,7 +414,11 @@ namespace KckSokoban_WPF
             var item = mb.CollectionMenuButtonImage[current];
             var previousItem = mb.CollectionMenuButtonImage[previous];
 
-            item.Fill = Brushes.Purple;
+           // item.Fill = Brushes.Purple;
+            item.Fill = new ImageBrush()
+            {
+                ImageSource = new BitmapImage(new Uri(@"tlo.png", UriKind.Relative))
+            };
             previousItem.Fill = Brushes.Aqua;
            
         }
